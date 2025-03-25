@@ -39,6 +39,11 @@ body {
    
 }
 
+.product-category {
+    padding-left: 200px;
+    margin: 50px 0px 20px 0px;
+}
+
 /* Product Grid */
 .product-grid {
     display:flex;
@@ -92,9 +97,14 @@ body {
     margin-bottom: 10px;
 }
 
+.product-description {
+    margin-bottom: 10px;
+}
+
 .product-image {
     max-width: 100%;
     height: 200px; /* Adjust height for better consistency */
+    margin-bottom: 10px;
 }
 
 .product-button {
