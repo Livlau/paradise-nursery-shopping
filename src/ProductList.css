@@ -41,7 +41,9 @@ body {
 
 .product-category {
     padding-left: 200px;
-    margin: 50px 0px 20px 0px;
+    margin: 50px 0px 30px 0px;
+    text-align: center;
+    text-decoration: underline;
 }
 
 /* Product Grid */
