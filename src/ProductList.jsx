@@ -276,6 +276,10 @@ function ProductList({ onHomeClick }) {
         return totalItems;
     }
 
+    const isInCart = (plant) => {
+        return cart.some((item) => item.name === plant.name && item.quantity > 0);
+    };
+
     return (
         <div>
             <div className="navbar" style={styleObj}>
@@ -308,7 +312,13 @@ function ProductList({ onHomeClick }) {
                                     <div className="product-title">{plant.name}</div>
                                     <div className="product-price">{plant.cost}</div>
                                     <div className="product-description">{plant.description}</div>
-                                    <button  className="product-button" onClick={() => handleAddToCart(plant)}>Add to Cart</button>
+                                    <button  
+                                        className={isInCart(plant) ? "product-button btn-disabled" : "product-button"} 
+                                        onClick={() => handleAddToCart(plant)}
+                                        disabled={isInCart(plant)} // Disables button if item is in cart
+                                    >
+                                        {isInCart(plant) ? "Added to Cart" : "Add to Cart"}
+                                    </button>
                                 </div>
                                 ))}
                             </div>
